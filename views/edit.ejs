@@ -1,0 +1,11 @@
+<%- include("header.ejs")%>
+
+<form action="/update/:id" method="Post">
+
+    <input type="text" name="text" id="" value="<%=response.text%>">
+    <input type="text" name="date" id="" value="<%=response.date%>">
+
+    <input type="text" name="_id" value="<%=response._id%>" hidden>
+    <button class="btn btn-light" type="submit">Update</button>
+
+</form>

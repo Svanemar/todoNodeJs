@@ -1,0 +1,65 @@
+<%- include("header.ejs")%>
+
+<div class="container">
+    <div class="row">
+        <div class="col-8" id="backdiv">
+            <div class="col-12" id="firstDiv">
+                <h1>Vad ska vi göra?</h1>
+                <form action="/createtodo" method="post">
+
+                    <input type="text" name="text" id="textfield" placeholder="Text">
+                    <input type="date" id="dateinput" name="date">
+
+                    <input type="submit" id="doit" value="todo">
+                    <td>
+                    <td><a class="btn btn-light" href="/todo/?date=-1" role="button">Sortera
+                            på datum</a></td>
+                    </td>
+                </form>
+
+
+            </div>
+
+            <div class="col-12 p-0">
+                <div class="col-2 rowDiv"></div>
+                <div class="col-4 m-0 p-0 rowDiv">
+                    <b>Att göra</b>
+                </div>
+                <div class="col-4 rowDiv">
+                    <b>När?</b>
+                </div>
+                <div class="col-2 rowDiv"></div>
+
+                <div class="row">
+                    <% todos.forEach( (todo)=>{ %>
+
+                    <div class="col-2"></div>
+                    <div class="col-4 rowDiv">
+                        <b><%= todo.text %></b>
+                    </div>
+                    <div class="col-4 rowDiv buttonDiv">
+                        <%= todo.date.getDate() + " /" %>
+                        <%= todo.date.getMonth() +1 %>
+                        <%= todo.date.getFullYear() %>
+
+                        <a class="btn btn-light" href="/update/<%=todo._id%>" role="button">Update</a>
+                        <a href="/delete/<%=todo._id%>" id="doneButton"> Done</a>
+
+                    </div>
+                    <div class="col-2 rowDiv">
+
+                    </div>
+
+                    <%  }) %>
+
+                </div>
+            </div>
+
+            <div class="col-12" id="pagDiv">
+                <a href="/todo/?page=1">1</a>
+                <a href="/todo/?page=2">2</a>
+            </div>
+        </div>
+    </div>
+</div>
+</div>

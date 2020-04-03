@@ -1,0 +1,29 @@
+{
+  "name": "todonodejs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node main.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Svanemar/todoNodeJs.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Svanemar/todoNodeJs/issues"
+  },
+  "homepage": "https://github.com/Svanemar/todoNodeJs#readme",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "ejs": "^3.0.2",
+    "express": "^4.17.1",
+    "mongoose": "^5.9.7",
+    "node-sass-middleware": "^0.11.0",
+    "nodemon": "^2.0.2",
+    "sass-loader": "^8.0.2"
+  }
+}
