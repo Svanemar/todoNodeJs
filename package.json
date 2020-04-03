@@ -21,6 +21,7 @@
     "dotenv": "^8.2.0",
     "ejs": "^3.0.2",
     "express": "^4.17.1",
+    "heroku-cli": "^7.0.9",
     "mongoose": "^5.9.7",
     "node-sass-middleware": "^0.11.0",
     "nodemon": "^2.0.2",
